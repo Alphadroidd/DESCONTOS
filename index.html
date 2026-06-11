@@ -604,6 +604,8 @@ src="https://www.facebook.com/tr?id=363578908933541&ev=PageView&noscript=1"
       if (window.zaraz) window.zaraz.track('whatsapp_click', { grupo: nome });
       // Google Analytics event (se GA4 configurado)
       if (window.gtag) window.gtag('event', 'whatsapp_click', { group_name: nome });
+      // Meta Pixel event (Lead)
+      if (window.fbq) window.fbq('track', 'Lead', { content_name: nome });
       console.log('Clique WhatsApp:', nome);
     });
   });
