@@ -379,13 +379,13 @@ src="https://www.facebook.com/tr?id=363578908933541&ev=PageView&noscript=1"
 <!-- CARROSSEL -->
 <div style="width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;display:flex;justify-content:center;padding:20px 0 8px;">
 <div style="width:min(420px,90vw);">
-  <div id="carousel" style="position:relative;overflow:hidden;border-radius:16px;background:#000;width:100%;height:min(75vw,520px);">
+  <div id="carousel" style="position:relative;overflow:hidden;border-radius:16px;background:#000;width:100%;height:auto;aspect-ratio:9/16;max-height:600px;">
     <!-- Slides -->
     <div class="cslide" style="display:block;">
-      <img src="assets/1.PNG" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <img src="assets/1.PNG" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;">
     </div>
     <div class="cslide" style="display:none;">
-      <img src="assets/2.PNG" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <img src="assets/2.PNG" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;">
     </div>
     <div class="cslide" style="display:none;position:relative;">
       <video id="cVideo" src="assets/Video1.MP4" style="width:100%;height:100%;object-fit:cover;display:block;" playsinline muted></video>
