@@ -379,16 +379,16 @@ src="https://www.facebook.com/tr?id=363578908933541&ev=PageView&noscript=1"
 <!-- CARROSSEL -->
 <div style="width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;display:flex;justify-content:center;padding:20px 0 8px;">
 <div style="width:min(420px,90vw);">
-  <div id="carousel" style="position:relative;overflow:hidden;border-radius:16px;background:#000;width:100%;height:auto;aspect-ratio:9/16;max-height:600px;">
+  <div id="carousel" style="position:relative;overflow:hidden;border-radius:16px;background:#000;width:100%;">
     <!-- Slides -->
     <div class="cslide" style="display:block;">
-      <img src="assets/1.PNG" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;">
+      <img src="assets/1.PNG" style="width:100%;height:auto;display:block;">
     </div>
     <div class="cslide" style="display:none;">
-      <img src="assets/2.PNG" style="width:100%;height:100%;object-fit:contain;display:block;background:#000;">
+      <img src="assets/2.PNG" style="width:100%;height:auto;display:block;">
     </div>
     <div class="cslide" style="display:none;position:relative;">
-      <video id="cVideo" src="assets/Video1.MP4" style="width:100%;height:100%;object-fit:cover;display:block;" playsinline muted></video>
+      <video id="cVideo" src="assets/Video1.MP4" style="width:100%;height:auto;display:block;" playsinline muted></video>
       <!-- Botão mute central transparente -->
       <button id="muteBtn" onclick="toggleMute()" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.35);border:2px solid rgba(255,255,255,0.5);border-radius:50%;width:56px;height:56px;font-size:22px;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);">🔇</button>
     </div>
@@ -397,12 +397,12 @@ src="https://www.facebook.com/tr?id=363578908933541&ev=PageView&noscript=1"
     <button onclick="cMoveSlide(-1)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.55);border:none;color:#fff;font-size:22px;padding:8px 14px;border-radius:50%;cursor:pointer;z-index:10;">‹</button>
     <button onclick="cMoveSlide(1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.55);border:none;color:#fff;font-size:22px;padding:8px 14px;border-radius:50%;cursor:pointer;z-index:10;">›</button>
 
-    <!-- Dots -->
-    <div style="position:absolute;bottom:12px;width:100%;display:flex;justify-content:center;gap:7px;">
-      <span class="cdot active" onclick="cGoSlide(0)" style="width:9px;height:9px;border-radius:50%;background:#ffc107;cursor:pointer;display:inline-block;opacity:1;"></span>
-      <span class="cdot" onclick="cGoSlide(1)" style="width:9px;height:9px;border-radius:50%;background:#fff;cursor:pointer;display:inline-block;opacity:0.5;"></span>
-      <span class="cdot" onclick="cGoSlide(2)" style="width:9px;height:9px;border-radius:50%;background:#fff;cursor:pointer;display:inline-block;opacity:0.5;"></span>
-    </div>
+  </div>
+  <!-- Dots fora do carousel -->
+  <div style="display:flex;justify-content:center;gap:7px;margin-top:10px;">
+    <span class="cdot active" onclick="cGoSlide(0)" style="width:9px;height:9px;border-radius:50%;background:#ffc107;cursor:pointer;display:inline-block;opacity:1;"></span>
+    <span class="cdot" onclick="cGoSlide(1)" style="width:9px;height:9px;border-radius:50%;background:#fff;cursor:pointer;display:inline-block;opacity:0.5;"></span>
+    <span class="cdot" onclick="cGoSlide(2)" style="width:9px;height:9px;border-radius:50%;background:#fff;cursor:pointer;display:inline-block;opacity:0.5;"></span>
   </div>
 </div>
 <script>
