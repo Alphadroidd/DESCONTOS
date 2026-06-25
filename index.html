@@ -242,6 +242,32 @@
     60%     { opacity:1; transform:scale(1.04); box-shadow:0 0 38px rgba(255,193,7,1); }
     70%     { opacity:1; transform:scale(1);    box-shadow:0 0 22px rgba(255,193,7,.6); }
   }
+
+  @keyframes quickBtnColor {
+    0%   { background:rgba(37,211,102,0.18); border-color:#25d366; color:#25d366; box-shadow:0 0 16px rgba(37,211,102,.4); }
+    33%  { background:rgba(26,143,255,0.18); border-color:#1a8fff; color:#1a8fff; box-shadow:0 0 16px rgba(26,143,255,.4); }
+    66%  { background:rgba(0,212,255,0.18);  border-color:#00d4ff; color:#00d4ff; box-shadow:0 0 16px rgba(0,212,255,.4); }
+    100% { background:rgba(37,211,102,0.18); border-color:#25d366; color:#25d366; box-shadow:0 0 16px rgba(37,211,102,.4); }
+  }
+  @keyframes quickArrowR {
+    0%,100% { transform:translateX(0);   opacity:1; }
+    50%      { transform:translateX(4px); opacity:.5; }
+  }
+  @keyframes quickArrowL {
+    0%,100% { transform:translateX(0);    opacity:1; }
+    50%      { transform:translateX(-4px); opacity:.5; }
+  }
+  .quick-btn {
+    display:inline-flex; align-items:center; gap:8px;
+    border:1.5px solid #25d366;
+    font-family:'Nunito',sans-serif; font-weight:800; font-size:14px;
+    padding:9px 22px; border-radius:50px; text-decoration:none;
+    animation: quickBtnColor 2.4s ease-in-out infinite;
+  }
+  .quick-btn:active { transform:scale(.96); }
+  .quick-arrow-r { animation: quickArrowR .8s ease-in-out infinite; color:#25d366; font-size:22px; display:inline-block; }
+  .quick-arrow-l { animation: quickArrowL .8s ease-in-out infinite; color:#25d366; font-size:22px; display:inline-block; }
+
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RCCEHT8Q9"></script>
